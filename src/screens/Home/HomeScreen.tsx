@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 import { RootStackScreenProps } from "../../navigation/homeStack";
 
 export default function HomeScreen({
@@ -7,6 +7,10 @@ export default function HomeScreen({
   return (
     <View>
       <Text>Hello!</Text>
+      <Button
+        title="Go to Image"
+        onPress={() => navigation.navigate("Image")}
+      />
     </View>
   );
 }

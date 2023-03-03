@@ -22,11 +22,11 @@ export default function ImageScreen({
   // const curImage = require(image.uri);
   return (
     <View style={styles.container}>
-      <Image source={require("./assets/images/avocado.png")} />
-      <Button title="BUTTON!!!!"></Button>
+      <Image source={require("../../../assets/images/avocado.png")} />
       <Pressable style={styles.button} onPress={() => pickImage()}>
         <Text style={styles.buttonText}>Select Image</Text>
       </Pressable>
+      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
       <StatusBar style="auto" />
     </View>
   );
