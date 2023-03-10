@@ -6,27 +6,27 @@ import {
   NativeStackScreenProps,
 } from "@react-navigation/native-stack";
 import ImageScreen from "../screens/Image/ImageScreen";
-import HomeScreen from "../screens/Home/HomeScreen";
+import WelcomeScreen from "../screens/Welcome/WelcomeScreen";
 
-type HomeStackParamList = {
+type RootStackParamList = {
   Image: undefined;
-  Home: undefined;
+  Welcome: undefined;
 };
 
-const Stack = createNativeStackNavigator<HomeStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const HomeStack = () => {
+const RootStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Image" component={ImageScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-export default HomeStack;
+export default RootStack;
 
-export type RootStackScreenProps<T extends keyof HomeStackParamList> =
-  NativeStackScreenProps<HomeStackParamList, T>;
+export type RootStackScreenProps<T extends keyof RootStackParamList> =
+  NativeStackScreenProps<RootStackParamList, T>;

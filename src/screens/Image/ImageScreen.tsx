@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { Button, Pressable, StyleSheet, Text, View, Image } from "react-native";
 import * as ImagePicker from "expo-image-picker";
-import { RootStackScreenProps } from "../../navigation/homeStack";
+import { RootStackScreenProps } from "../../navigation/RootStack";
 
 export default function ImageScreen({
   navigation,
@@ -26,7 +26,10 @@ export default function ImageScreen({
       <Pressable style={styles.button} onPress={() => pickImage()}>
         <Text style={styles.buttonText}>Select Image</Text>
       </Pressable>
-      <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
+      <Button
+        title="Go to Home"
+        onPress={() => navigation.navigate("Welcome")}
+      />
       <StatusBar style="auto" />
     </View>
   );
