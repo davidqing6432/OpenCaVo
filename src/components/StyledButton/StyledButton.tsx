@@ -1,9 +1,5 @@
-import { Pressable, Text, StyleSheet } from "react-native";
-
-const styles = StyleSheet.create({
-  buttonContainer: {},
-  text: { fontFamily: "Avenir" },
-});
+import { Pressable, Text } from "react-native";
+import styles from "./styles";
 
 type propTypes = {
   text: string;
