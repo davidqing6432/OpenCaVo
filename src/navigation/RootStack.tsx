@@ -2,15 +2,16 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import {
   createNativeStackNavigator,
-  NativeStackNavigationProp,
   NativeStackScreenProps,
 } from "@react-navigation/native-stack";
-import ImageScreen from "../screens/Image/ImageScreen";
+import AddMemberScreen from "../screens/AddMember/AddMemberScreen";
 import WelcomeScreen from "../screens/Welcome/WelcomeScreen";
+import AttendanceScreen from "../screens/Attendance/AttendanceScreen";
 
 type RootStackParamList = {
-  Image: undefined;
+  AddMember: undefined;
   Welcome: undefined;
+  Attendance: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -18,9 +19,14 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const RootStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={({ route, navigation }) => ({
+          headerShown: false,
+        })}
+      >
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="Image" component={ImageScreen} />
+        <Stack.Screen name="AddMember" component={AddMemberScreen} />
+        <Stack.Screen name="Attendance" component={AttendanceScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

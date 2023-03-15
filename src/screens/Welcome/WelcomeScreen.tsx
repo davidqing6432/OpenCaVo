@@ -17,21 +17,17 @@ export default function WelcomeScreen({
       <View style={styles.buttons}>
         <StyledButton
           text="Add a new member"
-          pressFunction={() => navigation.navigate("Image")}
+          pressFunction={() => navigation.navigate("AddMember")}
         />
         <StyledButton
           text="Take attendance"
-          pressFunction={() => navigation.navigate("Image")}
+          pressFunction={() => navigation.navigate("Attendance")}
         />
         <StyledButton
           text="List current members"
-          pressFunction={() => navigation.navigate("Image")}
+          pressFunction={() => navigation.navigate("AddMember")}
         />
       </View>
-      <MemberCard
-        name="David"
-        imageSrc={require("./../../../assets/images/avocado.png")}
-      />
     </View>
   );
 }

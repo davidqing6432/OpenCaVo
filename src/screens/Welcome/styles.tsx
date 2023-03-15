@@ -3,7 +3,9 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     height: "100%",
-    padding: 16,
+    backgroundColor: "#F5F5F5",
+    paddingVertical: 40,
+    paddingHorizontal: 16,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -11,6 +13,8 @@ const styles = StyleSheet.create({
   },
   buttons: {
     width: "100%",
+    height: 160,
+    justifyContent: "space-between",
   },
   heading: {
     textAlign: "center",
