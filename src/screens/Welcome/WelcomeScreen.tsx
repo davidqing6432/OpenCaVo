@@ -25,7 +25,7 @@ export default function WelcomeScreen({
         />
         <StyledButton
           text="List current members"
-          pressFunction={() => navigation.navigate("AddMember")}
+          pressFunction={() => navigation.navigate("MemberList")}
         />
       </View>
     </View>

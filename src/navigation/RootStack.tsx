@@ -7,11 +7,13 @@ import {
 import AddMemberScreen from "../screens/AddMember/AddMemberScreen";
 import WelcomeScreen from "../screens/Welcome/WelcomeScreen";
 import AttendanceScreen from "../screens/Attendance/AttendanceScreen";
+import MemberListScreen from "../screens/MemberList/MemberListScreen";
 
 type RootStackParamList = {
   AddMember: undefined;
   Welcome: undefined;
   Attendance: undefined;
+  MemberList: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -27,6 +29,7 @@ const RootStack = () => {
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="AddMember" component={AddMemberScreen} />
         <Stack.Screen name="Attendance" component={AttendanceScreen} />
+        <Stack.Screen name="MemberList" component={MemberListScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
